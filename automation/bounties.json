@@ -1,0 +1,73 @@
+[
+  {
+    "id": "git-forge",
+    "title": "GitHub-compatible git forge",
+    "url": "https://make.fun/bounty/github-core-clone-01",
+    "repository": "wallyben/makefun-git-forge",
+    "deadline": "2026-11-21T06:30:00Z",
+    "rewardUsd": 500,
+    "priority": 9,
+    "requirements": [
+      "Node 22",
+      "Git compatibility",
+      "Official kit and provenance"
+    ]
+  },
+  {
+    "id": "gta6",
+    "title": "Make GTA 6",
+    "url": "https://make.fun/bounty/gta6-01",
+    "repository": "wallyben/makefun-gta6",
+    "deadline": "2026-11-24T15:00:00Z",
+    "rewardUsd": 1666,
+    "priority": 10,
+    "requirements": [
+      "Browser playable",
+      "Official gameplay rubric",
+      "Screenshots and provenance"
+    ]
+  },
+  {
+    "id": "chess-4kb",
+    "title": "Strongest chess engine in 4KB Python",
+    "url": "https://make.fun/bounty/chess-4kb-01",
+    "repository": "wallyben/makefun-chess-4kb",
+    "deadline": "2026-11-24T17:00:00Z",
+    "rewardUsd": 500,
+    "priority": 8,
+    "requirements": [
+      "Python",
+      "4096-byte constraint",
+      "Strength benchmarks and provenance"
+    ]
+  },
+  {
+    "id": "token-radar",
+    "title": "Best token launch radar",
+    "url": "https://make.fun/bounty/token-radar-01",
+    "repository": "wallyben/makefun-token-radar",
+    "deadline": "2026-12-14T10:00:00Z",
+    "rewardUsd": 1325,
+    "priority": 9,
+    "requirements": [
+      "Official sealed dataset",
+      "100+ real protocols",
+      "Offline dashboard",
+      "Authentic agent provenance"
+    ]
+  },
+  {
+    "id": "roblox-brainrot",
+    "title": "Best AI Roblox brainrot game",
+    "url": "https://make.fun/bounty/roblox-brainrot-01",
+    "repository": "wallyben/makefun-roblox-brainrot",
+    "deadline": "2026-11-20T14:30:00Z",
+    "rewardUsd": 1000,
+    "priority": 5,
+    "requirements": [
+      "Roblox Studio",
+      "Official gameplay requirements",
+      "Authentic agent provenance"
+    ]
+  }
+]
