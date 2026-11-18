@@ -11,7 +11,11 @@
       "Node 22",
       "Git compatibility",
       "Official kit and provenance"
-    ]
+    ],
+    "repositoryCreated": true,
+    "implementationStatus": "initial-code-committed",
+    "verifiedTests": false,
+    "verifiedEligibility": false
   },
   {
     "id": "gta6",
@@ -25,7 +29,11 @@
       "Browser playable",
       "Official gameplay rubric",
       "Screenshots and provenance"
-    ]
+    ],
+    "repositoryCreated": true,
+    "implementationStatus": "initial-code-committed",
+    "verifiedTests": false,
+    "verifiedEligibility": false
   },
   {
     "id": "chess-4kb",
@@ -39,7 +47,11 @@
       "Python",
       "4096-byte constraint",
       "Strength benchmarks and provenance"
-    ]
+    ],
+    "repositoryCreated": true,
+    "implementationStatus": "initial-code-committed",
+    "verifiedTests": false,
+    "verifiedEligibility": false
   },
   {
     "id": "token-radar",
@@ -54,7 +66,11 @@
       "100+ real protocols",
       "Offline dashboard",
       "Authentic agent provenance"
-    ]
+    ],
+    "repositoryCreated": true,
+    "implementationStatus": "dashboard-scaffold",
+    "verifiedTests": false,
+    "verifiedEligibility": false
   },
   {
     "id": "roblox-brainrot",
@@ -68,6 +84,10 @@
       "Roblox Studio",
       "Official gameplay requirements",
       "Authentic agent provenance"
-    ]
+    ],
+    "repositoryCreated": true,
+    "implementationStatus": "initial-code-committed",
+    "verifiedTests": false,
+    "verifiedEligibility": false
   }
 ]
