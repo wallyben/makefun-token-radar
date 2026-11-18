@@ -1,0 +1,33 @@
+name: Free Bounty Coordinator
+on:
+  schedule:
+    - cron: '41 */3 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'automation/tasks.json'
+      - 'scripts/queue.mjs'
+      - '.github/workflows/free-coordinator.yml'
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build deterministic priority queue
+        run: node scripts/queue.mjs
+      - name: Generate readiness audit
+        run: node scripts/readiness.mjs
+      - name: Publish reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: free-coordinator-reports
+          path: |
+            automation/queue-report.json
+            readiness.json
+          retention-days: 14
