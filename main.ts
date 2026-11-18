@@ -42,6 +42,7 @@ for (const [i, row] of rows.entries()) {
 }
 await mkdir(output, { recursive: true });
 await copyFile("board.json", join(output, "board.json"));
+await writeFile(join(output, "board-data.js"), "window.TOKEN_RADAR_BOARD = " + JSON.stringify(rows).replace(/</g, "\\u003c") + ";");
 const html = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark">
@@ -60,6 +61,6 @@ const html = `<!doctype html><html lang="en"><head><meta charset="utf-8">
 <div class="table-wrap"><table><thead><tr><th>#</th><th>Protocol</th><th>Chain</th><th>Category</th><th>Implied value</th><th>Research</th></tr></thead><tbody id="rows"></tbody></table></div></section>
 </main><dialog id="detail"><div id="detail-content"></div><button id="close" class="close" aria-label="Close details">×</button></dialog>
 <footer>Research snapshot · Estimates are uncertain, not investment advice · Data must be verified against official sealed snapshot</footer>
-<script src="./app.js"></script></body></html>`;
+<script src="./board-data.js"></script><script src="./app.js"></script></body></html>`;
 await writeFile(join(output, "index.html"), html);
 console.log(`Offline dashboard generated for ${rows.length} rows at ${output}`);
