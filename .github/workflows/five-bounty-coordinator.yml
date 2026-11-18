@@ -1,0 +1,31 @@
+name: Five Bounty Coordinator
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '11 */2 * * *'
+  push:
+    paths:
+      - 'automation/bounties.json'
+      - 'scripts/five-bounty-coordinator.mjs'
+      - '.github/workflows/five-bounty-coordinator.yml'
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate configuration and rank bounties
+        run: node scripts/five-bounty-coordinator.mjs
+      - name: Upload five-bounty report
+        uses: actions/upload-artifact@v4
+        with:
+          name: five-bounty-status
+          path: |
+            automation/five-bounty-report.json
+            automation/STATUS.md
+          retention-days: 14
