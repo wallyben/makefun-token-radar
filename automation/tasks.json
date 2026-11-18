@@ -1,0 +1,7 @@
+[
+  {"id":"TR-001","title":"Acquire official sealed snapshot and vendor kit","repo":"wallyben/makefun-token-radar","priority":10,"deadline":"2026-12-14T10:00:00Z","status":"blocked","blocker":"Official kit not available in repository"},
+  {"id":"TR-002","title":"Adapt official schema and produce genuine complete watchlist","repo":"wallyben/makefun-token-radar","priority":9,"deadline":"2026-12-14T10:00:00Z","status":"blocked","blocker":"TR-001"},
+  {"id":"TR-003","title":"Complete responsive offline dashboard and accessibility checks","repo":"wallyben/makefun-token-radar","priority":7,"deadline":"2026-12-14T10:00:00Z","status":"ready"},
+  {"id":"TR-004","title":"Capture actual screenshots and run official checker","repo":"wallyben/makefun-token-radar","priority":9,"deadline":"2026-12-14T10:00:00Z","status":"blocked","blocker":"TR-002"},
+  {"id":"TR-005","title":"Verify authentic agent transcript eligibility","repo":"wallyben/makefun-token-radar","priority":10,"deadline":"2026-12-14T10:00:00Z","status":"blocked","blocker":"Official Codex allowance / checker"}
+]
