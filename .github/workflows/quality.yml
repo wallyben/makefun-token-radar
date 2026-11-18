@@ -1,0 +1,30 @@
+name: Quality Gate
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit tests
+        run: npm test
+      - name: Syntax validation
+        run: |
+          node --check dashboard/app.js
+          node --check lib/valuation.mjs
+      - name: Check competition assets
+        shell: bash
+        run: |
+          if [[ -f board.json && -f vendor/makefun-board.ts ]]; then
+            npm run build
+          else
+            echo "::notice::Official sealed dataset/vendor missing. Build gate remains pending."
+          fi
