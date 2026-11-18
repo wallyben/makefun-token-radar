@@ -3,9 +3,11 @@
 const tbody=document.querySelector("#rows"),search=document.querySelector("#search"),chain=document.querySelector("#chain"),sort=document.querySelector("#sort"),count=document.querySelector("#count"),detail=document.querySelector("#detail");
 let data=[];
 try{
+ if (Array.isArray(window.TOKEN_RADAR_BOARD)) { data = window.TOKEN_RADAR_BOARD; } else {
  const response=await fetch("./board.json");
  if(!response.ok)throw new Error("board.json unavailable");
  const raw=await response.json();data=Array.isArray(raw)?raw:(raw.rows||raw.protocols||raw.watchlist||raw.board||[]);
+ }
 }catch(e){count.textContent="Unable to load board.json. Use a local static server if your browser blocks file:// JSON loading.";return;}
 const val=(r,...keys)=>{for(const k of keys)if(r[k]!=null)return String(r[k]);return""};
 const name=r=>val(r,"name","protocol","protocolName");
